@@ -50,6 +50,16 @@ public class PlayerInputs : MonoBehaviour
 	{
 		SprintInput(value.isPressed);
 	}
+
+	public void OnCrouch(InputValue value)
+	{
+		CrouchInput(value.isPressed);
+	}
+
+	public void OnProne(InputValue value)
+	{
+		ProneInput(value.isPressed);
+	}
 #endif
 
 
@@ -74,14 +84,6 @@ public class PlayerInputs : MonoBehaviour
 		controller.SetSprintAnimation(IsSprint);
 	}
 
-	public void OnCrouch(InputValue value)
-	{
-		CrouchInput(value.isPressed);
-	}
-	public void OnProne(InputValue value)
-	{
-		ProneInput(value.isPressed);
-	}
 
 
 	public void CrouchInput(bool newJumpState)

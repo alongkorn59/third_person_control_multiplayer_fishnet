@@ -1,3 +1,6 @@
+using Cinemachine;
+using FishNet.Example.Scened;
+using FishNet.Object;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -7,7 +10,7 @@ using UnityEngine.InputSystem;
 #if ENABLE_INPUT_SYSTEM
 [RequireComponent(typeof(PlayerInput))]
 #endif
-public class ThirdPersonController : MonoBehaviour
+public class ThirdPersonController : NetworkBehaviour
 {
     [Header("Player")]
     [Tooltip("Move speed of the character in m/s")]
@@ -88,7 +91,7 @@ public class ThirdPersonController : MonoBehaviour
     private Animator animator;
     private Transform model;
     private CharacterController controller;
-    private PlayerInputs input;
+    [SerializeField] private PlayerInputs input;
     private GameObject mainCamera;
 
     private const float threshold = 0.01f;
@@ -117,6 +120,10 @@ public class ThirdPersonController : MonoBehaviour
         {
             mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         }
+        controller = GetComponent<CharacterController>();
+        model = transform.Find("Model");
+        input = GetComponent<PlayerInputs>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     private void Start()
@@ -124,10 +131,6 @@ public class ThirdPersonController : MonoBehaviour
         cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
         hasAnimator = TryGetComponent(out animator);
-        controller = GetComponent<CharacterController>();
-        model = transform.Find("Model");
-        input = GetComponent<PlayerInputs>();
-        playerInput = GetComponent<PlayerInput>();
 
         // reset our timeouts on start
         jumpTimeoutDelta = JumpTimeout;
@@ -146,6 +149,23 @@ public class ThirdPersonController : MonoBehaviour
     private void LateUpdate()
     {
         CameraRotation();
+    }
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+        if (IsOwner)
+        {
+            var uiInput = FindObjectOfType<UICanvasControllerInput>();
+            uiInput.playerInputs = input;
+
+            var cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+            cinemachineVirtualCamera.Follow = CinemachineCameraTarget.transform;
+        }
+        else
+        {
+            // gameObject.GetComponent<PlayerController>().enabled = false;
+        }
     }
 
     private void GroundedCheck()
@@ -239,7 +259,6 @@ public class ThirdPersonController : MonoBehaviour
         // update animator if using character
         if (hasAnimator)
         {
-            // Debug.Log($"inputDirection == {inputDirection} ");
             animator.SetFloat(AnimationType.Speed.ToString(), animationBlend);
             animator.SetFloat(AnimationType.Vertical.ToString(), inputDirection.z);
             animator.SetFloat(AnimationType.Horizontal.ToString(), inputDirection.x);
@@ -265,7 +284,7 @@ public class ThirdPersonController : MonoBehaviour
         }
         else
         {
-            targetSpeed = input.IsSprint ? SprintSpeed : MoveSpeed;
+            targetSpeed = input.IsSprint ? SprintSpeed : MoveSpeed; 
         }
 
         return targetSpeed;
