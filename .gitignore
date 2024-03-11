@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
+*/[Ll]ibrary/
+*/[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+*/[Ll]ogs/
+*/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -70,3 +70,39 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+TPS Control (Multiplayer Fishnet)/UserSettings/Layouts/default-2022.dwlt
+TPS Control (Multiplayer Fishnet)/UserSettings/Search.settings
+TPS Control (Multiplayer Fishnet)/UserSettings/EditorUserSettings.asset
+TPS Control (Multiplayer Fishnet)/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+TPS Control (Multiplayer Fishnet)/Logs/AssetImportWorker3-prev.log
+TPS Control (Multiplayer Fishnet)/Logs/AssetImportWorker2-prev.log
+TPS Control (Multiplayer Fishnet)/Logs/AssetImportWorker1-prev.log
+TPS Control (Multiplayer Fishnet)/Logs/AssetImportWorker0-prev.log
+TPS Control (Multiplayer Fishnet)/.vscode/settings.json
+TPS Control (Multiplayer Fishnet)/.vscode/launch.json
+TPS Control (Multiplayer Fishnet)/.vscode/extensions.json
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotts627kro.cx8/lib_burst_generated_part_d636e4baec7f7eb1d42a504f9a31611a.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotts627kro.cx8/lib_burst_generated_part_d636e4baec7f7eb1d42a504f9a31611a.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotts627kro.cx8/lib_burst_generated_part_c5da162bb9dc9272f53313b169c04eaa.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotts627kro.cx8/lib_burst_generated_part_c5da162bb9dc9272f53313b169c04eaa.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotrt4p5in3.m8v/lib_burst_generated_part_adceb2156d08d59afc9749dc2521fd2b.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotrt4p5in3.m8v/lib_burst_generated_part_adceb2156d08d59afc9749dc2521fd2b.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotrt4p5in3.m8v/lib_burst_generated_part_a6f5259e22ed809ef3937424c4bd686d.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotrt4p5in3.m8v/lib_burst_generated_part_a6f5259e22ed809ef3937424c4bd686d.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotrt4p5in3.m8v/lib_burst_generated_part_77fc393cb521ac129b1392d4eb94d29a.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aotrt4p5in3.m8v/lib_burst_generated_part_77fc393cb521ac129b1392d4eb94d29a.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot7dvcxoq3.9d0/lib_burst_generated_part_da352d92cabf024fc9986011d52a4537.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot7dvcxoq3.9d0/lib_burst_generated_part_da352d92cabf024fc9986011d52a4537.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot7dvcxoq3.9d0/lib_burst_generated_part_89425a97f3f500fa810ad03f0c382542.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot7dvcxoq3.9d0/lib_burst_generated_part_89425a97f3f500fa810ad03f0c382542.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot3tkdp4u7.31r/lib_burst_generated_part_fbc079948c97a98cd097eb9cc996cc4a.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot3tkdp4u7.31r/lib_burst_generated_part_fbc079948c97a98cd097eb9cc996cc4a.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot3tkdp4u7.31r/lib_burst_generated_part_aa309157da5950aa53ed6075709e6e40.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot3tkdp4u7.31r/lib_burst_generated_part_aa309157da5950aa53ed6075709e6e40.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot3tkdp4u7.31r/lib_burst_generated_part_670478f3fb3f285eeace534fbe61a03e.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot3tkdp4u7.31r/lib_burst_generated_part_670478f3fb3f285eeace534fbe61a03e.gbc
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot3tkdp4u7.31r/lib_burst_generated_part_2230a143748f5ecbc3a89a75bf0ad747.obj
+TPS Control (Multiplayer Fishnet)/Temp/Burst/burst-aot3tkdp4u7.31r/lib_burst_generated_part_2230a143748f5ecbc3a89a75bf0ad747.gbc
+TPS Control (Multiplayer Fishnet)/Temp/workerlic
+TPS Control (Multiplayer Fishnet)/Temp/UnityLockfile
+TPS Control (Multiplayer Fishnet)/Temp/FSTimeGet-68e3b926d75c7d54295561615b98d6e1
